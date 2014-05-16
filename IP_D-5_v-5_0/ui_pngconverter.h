@@ -42,6 +42,11 @@ public:
         if (pngconverter->objectName().isEmpty())
             pngconverter->setObjectName(QStringLiteral("pngconverter"));
         pngconverter->resize(742, 595);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(74);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(pngconverter->sizePolicy().hasHeightForWidth());
+        pngconverter->setSizePolicy(sizePolicy);
         actionQuit = new QAction(pngconverter);
         actionQuit->setObjectName(QStringLiteral("actionQuit"));
         QFont font;
@@ -67,7 +72,12 @@ public:
         menuBar = new QMenuBar(pngconverter);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 742, 42));
-        menuBar->setMinimumSize(QSize(0, 0));
+        QSizePolicy sizePolicy1(QSizePolicy::MinimumExpanding, QSizePolicy::Minimum);
+        sizePolicy1.setHorizontalStretch(74);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(menuBar->sizePolicy().hasHeightForWidth());
+        menuBar->setSizePolicy(sizePolicy1);
+        menuBar->setMinimumSize(QSize(742, 42));
         menuBar->setFont(font);
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QStringLiteral("menuFile"));

@@ -12,3 +12,8 @@ pngconverter::~pngconverter()
 {
     delete ui;
 }
+
+void pngconverter::on_BT_Quit_clicked()
+{
+
+}

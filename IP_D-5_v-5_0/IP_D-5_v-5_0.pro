@@ -13,9 +13,16 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        pngconverter.cpp
+        pngconverter.cpp \
+    textedit.cpp \
+    assistant.cpp \
+    findfiledialog.cpp
 
-HEADERS  += pngconverter.h
+HEADERS  += pngconverter.h \
+    include/textedit.h \
+    include/assistant.h \
+    include/findfiledialog.h \
+    ui_pngconverter.h
 
 FORMS    += pngconverter.ui
 
